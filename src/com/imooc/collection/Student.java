@@ -5,35 +5,35 @@ import java.util.Set;
 
 /**
  * Ñ§ÉúÀà
- * @author Administrator
  *
+ * @author Administrator
  */
 public class Student {
 
-	public String id;
-	
-	public String name;
-	
-	public Set<Course> courses;
+    public String id;
 
-	public Student(String id, String name) {
-		this.id = id;
-		this.name = name;
-		this.courses = new HashSet<>();
-	}
+    public String name;
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+    public Set<Course> courses;
 
-		Student student = (Student) o;
+    public Student(String id, String name) {
+        this.id = id;
+        this.name = name;
+        this.courses = new HashSet<>();
+    }
 
-		return name.equals(student.name);
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-	@Override
-	public int hashCode() {
-		return name.hashCode();
-	}
+        Student student = (Student) o;
+
+        return name.equals(student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
 }

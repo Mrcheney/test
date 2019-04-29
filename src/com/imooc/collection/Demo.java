@@ -11,10 +11,11 @@ public class Demo {
 
     public List ls;
 
-    public Demo(){
+    public Demo() {
         this.ls = new ArrayList();
     }
-    public void test(){
+
+    public void test() {
 
         ls.add(0);
         System.out.println(ls);
