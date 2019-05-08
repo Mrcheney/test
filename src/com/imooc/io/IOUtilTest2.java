@@ -10,8 +10,12 @@ import java.io.IOException;
 public class IOUtilTest2 {
     public static void main(String[] args) {
         try {
-            IOUtil.copyFileByBuffer(new File("/Users/cheney/cheney-workspace/JavaFirst/src/TestString.java")
-                     ,new File("/Users/cheney/cheney-workspace/JavaFirst/src/Testaaa.java"));
+            Long start = System.currentTimeMillis();
+            IOUtil.copyFileByBuffer(new File("/Users/cheney/save_img/1.jpg")
+                     ,new File("/Users/cheney/save_img/copy_1.jpg"));
+            // 755毫秒 读取带缓冲的字节流数据（未批量读取）
+            Long end = System.currentTimeMillis();
+            System.out.println(end - start);
         } catch (IOException e) {
             e.printStackTrace();
         }

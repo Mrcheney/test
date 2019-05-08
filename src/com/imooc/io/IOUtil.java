@@ -47,6 +47,11 @@ public class IOUtil {
         FileOutputStream out = new FileOutputStream(destFile);
         byte[] buf = new byte[8*1024];
         int b;
+        /**
+         * 从in中批量读取字节，放入到buf这个字节数组中，
+         * 从第0个位置开始放，最多放buf.length个
+         * 返回的是读到的字节的个数。
+         */
         while ((b = in.read(buf,0,buf.length))!= -1){
             out.write(buf,0,b);
             out.flush();
